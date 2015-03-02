@@ -11,12 +11,12 @@ describe("isArrayLike", function() {
         assert.equal(isArrayLike(function noop() {}), false);
         assert.equal(isArrayLike(/./), false);
         assert.equal(isArrayLike({}), false);
+        assert.equal(isArrayLike(new ArrayBuffer()), false);
 
         assert.equal(isArrayLike([]), true);
         assert.equal(isArrayLike(arguments), true);
         assert.equal(isArrayLike(new Float32Array()), true);
         assert.equal(isArrayLike(new Float64Array()), true);
-        assert.equal(isArrayLike(new ArrayBuffer()), true);
         assert.equal(isArrayLike(new Int8Array()), true);
         assert.equal(isArrayLike(new Int16Array()), true);
         assert.equal(isArrayLike(new Int32Array()), true);

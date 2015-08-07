@@ -1,11 +1,11 @@
 var isLength = require("is_length"),
     isFunction = require("is_function"),
-    isObjectLike = require("is_object_like");
+    isObject = require("is_object");
 
 
 module.exports = isArrayLike;
 
 
 function isArrayLike(value) {
-    return isObjectLike(value) && isLength(value.length) && !isFunction(value);
+    return !isFunction(value) && isObject(value) && isLength(value.length);
 }

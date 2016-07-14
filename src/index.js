@@ -1,6 +1,6 @@
-var isLength = require("is_length"),
-    isFunction = require("is_function"),
-    isObject = require("is_object");
+var isLength = require("@nathanfaucett/is_length"),
+    isFunction = require("@nathanfaucett/is_function"),
+    isObject = require("@nathanfaucett/is_object");
 
 
 module.exports = isArrayLike;
